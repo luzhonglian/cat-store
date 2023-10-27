@@ -1,0 +1,108 @@
+{
+	"custom": {
+			"^u--(.*)": "@/uni_modules/uview-plus/components/u-$1/u-$1.vue",
+			"^up-(.*)": "@/uni_modules/uview-plus/components/u-$1/u-$1.vue",
+			"^u-([^-].*)": "@/uni_modules/uview-plus/components/u-$1/u-$1.vue"
+		},
+	"pages": [ 
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "uni-app"
+			}
+		}
+	    ,{
+            "path" : "pages/search/search",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/order/order",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/cart/cart",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/user/user",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        } 
+        
+        ,{
+            "path" : "pages/Detail/Detail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        
+    ],
+	
+	"tabBar": {
+		"color": "black",
+		"selectedColor": "#1296db",
+		// "borderStyle": "black",
+		"backgroundColor": "#edeff6",
+		"height": "8vh",
+		"list": [
+		{
+			"pagePath": "pages/index/index",
+			"iconPath": "static/icons/home.png",
+			"selectedIconPath": "static/icons/home-s.png",
+			"text": "首页"
+		}, 
+		{
+			"pagePath": "pages/search/search",
+			"iconPath": "static/icons/search.png",
+			"selectedIconPath": "static/icons/search-s.png",
+			"text": "搜索"
+		},
+		{
+			"pagePath": "pages/cart/cart",
+			"iconPath": "static/icons/cart.png",
+			"selectedIconPath": "static/icons/cart-s.png",
+			"text": "购物车"
+		},	{
+			"pagePath": "pages/order/order",
+			"iconPath": "static/icons/order.png",
+			"selectedIconPath": "static/icons/order-s.png",
+			"text": "订单"
+		},	{
+			"pagePath": "pages/user/user",
+			"iconPath": "static/icons/user.png",
+			"selectedIconPath": "static/icons/user-s.png",
+			"text": "我的"
+		}
+		]
+	},
+"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8",
+		"navigationStyle": "custom"
+	},
+	"uniIdRouter": {}
+}
