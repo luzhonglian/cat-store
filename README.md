@@ -35,7 +35,7 @@ https://www.bilibili.com/video/BV1Lw411q7ZS
 
 ## 项目运行准备 <a name = "getting_started"></a>
 
-**安装 node、npm、mongoDB、Hbulder X**
+**安装 node、npm、mongoDB、HBuilder X**
 
 ## 项目运行 <a name = "usage"></a>
 
@@ -45,10 +45,10 @@ npm install
 npm start
 //连接mongoDB，推荐使用compass
 
-//将cat-store放进HBuilder X环境里
+//将cat-store放进HBuilderX环境里
 //先安装相关依赖
 npm install
-//点击HBuilder X里的运行
+//点击HBuilderX里的运行
 ```
 
 ## 开发中的踩坑记录 <a name = "bug"></a>
