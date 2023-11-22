@@ -114,7 +114,7 @@ store.state.token的判断
 >
 ```
 
-**-切换用户登录后进入订单，发现渲染的数据是上一个用户的，但打印的是最新 get 到的数据**
+**-切换用户登录后进入订单，发现渲染数据为当前用户前上一个用户的订单还会短暂地显示**
 
 ```javascript
 //order.vue
@@ -130,8 +130,7 @@ onShow(
 ```
 
 ```html
-<!-- 原因是组件渲染是同步的，
-而获取最新的orderList方法是异步的，
+<!-- 原因是获取最新的orderList方法是异步的，
 在orList更新前子组件仍然用旧的值进行渲染
   -->
 <view v-if="!isEmpty" v-for="order in orderList" :key="order._id">
@@ -152,9 +151,23 @@ onShow(
 const getOrderList = async () => {
     ....
     //在函数的最后把isOrder变为true，
-    //且每次退出登录都改为false
     store.commit('setIsOrder', true)
 }
+```
+
+```javascript
+//user.vue
+const quit = () => {
+  uni.showModal({
+    //...
+    success: () => {
+      //...
+      store.commit("setIsOrder", false);
+      //且每次退出登录都把isOrder改为false
+      //由此可以确保哪个用户登录，就只可能显示哪个用户的数据
+    },
+  });
+};
 ```
 
 **-在微信小程序上测试时报错  

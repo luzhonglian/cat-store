@@ -7,7 +7,7 @@ export default defineConfig({
 	plugins: [
 		uni()
 	],
-	// ifdef H5
+	//#ifdef H5
 	server: {
 		proxy: {
 			"/store-api": {
@@ -22,5 +22,5 @@ export default defineConfig({
 
 
 	},
-	//endif
+	//#endif
 })
